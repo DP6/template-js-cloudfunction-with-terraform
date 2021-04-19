@@ -11,7 +11,7 @@
   "scripts": {
     "format": "prettier --write .",
     "lint-md": "remark .",
-    "lint-prettier": "npx prettier --check .",
+    "lint-prettier": "npx prettier --check . || exit 0",
     "lint": "npm run lint-md && npm run lint-prettier",
     "unit-test": "mocha ./test/unit  -timeout 8000",
     "integration-test": "mocha ./test/integration --timeout=16000 --exit",
