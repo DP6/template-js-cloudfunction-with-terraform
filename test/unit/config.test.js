@@ -7,7 +7,7 @@ describe('Arquivo de configuração', () => {
   let config;
   before(() => {
     config = JSON.parse(
-      fs.readFileSync('terraform/files-copy-to-gcs/penguin-datalayer-collect/config.json').toString()
+      fs.readFileSync('terraform/files-copy-to-gcs/project-name/config.json').toString()
     );
   });
   it('Deve possuir o atributo DEPARA_SCHEMA', async () => {
