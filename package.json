@@ -1,11 +1,11 @@
 {
-  "name": "package.json-project-name",
+  "name": "template-js-cloudfunction-with-terraform",
   "private": "true",
   "version": "0.1.0",
   "description": "Google Cloud Function",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DP6/{{repo}}.git"
+    "url": "https://github.com/DP6/template-js-cloudfunction-with-terraform.git"
   },
   "main": "index.js",
   "scripts": {
@@ -33,9 +33,9 @@
     "dp6"
   ],
   "bugs": {
-    "url": "https://github.com/DP6/{{repo}}/issues"
+    "url": "https://github.com/DP6/template-js-cloudfunction-with-terraform/issues"
   },
-  "homepage": "https://github.com/DP6/{{repo}}#readme",
+  "homepage": "https://github.com/DP6/template-js-cloudfunction-with-terraform#readme",
   "release": {
     "branch": "master",
     "plugins": [

@@ -1,7 +1,7 @@
 const { BigQuery } = require('@google-cloud/bigquery');
 const { Storage } = require('@google-cloud/storage');
 const BUCKET_GCS = process.env.PROJECT_BUCKET_GCS;
-const PROJECT_FOLTER = 'project-name';
+const PROJECT_FOLDER = 'project-name';
 let projectConfig = {};
 let debugging = false;
 
@@ -107,7 +107,7 @@ async function loadProjectConfig() {
   const storage = new Storage();
   const bucket = storage.bucket(BUCKET_GCS);
 
-  let file = bucket.file(`${PROJECT_FOLTER}/config.json`);
+  let file = bucket.file(`${PROJECT_FOLDER}/config.json`);
   let projectConfig = (await file.download())[0].toString();
 
   return JSON.parse(projectConfig);

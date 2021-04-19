@@ -1,4 +1,4 @@
-# {{nome_projeto}}
+# template-js-cloudfunction-with-terraform
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/centro_de_inovacao_dp6.png" height="100px" />
@@ -8,7 +8,25 @@
   <a href="#badge">
     <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
   </a>
-  <a href="https://www.codacy.com/gh/DP6/{{repo}}/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DP6/{{repo}}&amp;utm_campaign=Badge_Coverage"><img alt="Code coverage" src="https://app.codacy.com/project/badge/Coverage/{{token-codacy}}"/></a>
+  <a href="https://www.codacy.com/gh/DP6/{{token-codacy}}/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DP6/{{repo}}&amp;utm_campaign=Badge_Coverage"><img alt="Code coverage" src="https://app.codacy.com/project/badge/Coverage/{{token-codacy}}"/></a>
+  <a href="#badge">
+    <img alt="Test" src="https://github.com/dp6/template-js-cloudfunction-with-terraform/actions/workflows/test.yml/badge.svg">
+  </a>
+  <a href="https://www.codacy.com/gh/DP6/template-js-cloudfunction-with-terraform/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DP6/template-js-cloudfunction-with-terraform&amp;utm_campaign=Badge_Grade">
+    <img alt="Code quality" src="https://app.codacy.com/project/badge/Grade/{{token-codacy}}">
+  </a>
+</p>
+
+<!--
+<div align="center">
+<img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/centro_de_inovacao_dp6.png" height="100px" />
+</div>
+
+<p align="center">
+  <a href="#badge">
+    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+  </a>
+  <a href="https://www.codacy.com/gh/DP6/{{token-codacy}}/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DP6/{{repo}}&amp;utm_campaign=Badge_Coverage"><img alt="Code coverage" src="https://app.codacy.com/project/badge/Coverage/{{token-codacy}}"/></a>
   <a href="#badge">
     <img alt="Test" src="https://github.com/dp6/{{repo}}/actions/workflows/test.yml/badge.svg">
   </a>
@@ -16,6 +34,7 @@
     <img alt="Code quality" src="https://app.codacy.com/project/badge/Grade/{{token-codacy}}">
   </a>
 </p>
+-->
 
 {{Texto introdutorio}}
 
@@ -32,8 +51,6 @@ Respositório template para CF utilizando
 - Analise de qualidade de código
 - Github pages com template do github.dp6.io
 
-# Setup {{repo}}
-
 # Preparando o repositório
 
 WIP
@@ -44,11 +61,10 @@ WIP
 
 ## Renomeando arquivos
 
-{{nome_projeto}}
-project_name
-{{repo}}
-package.json-project-name
-WIP
+- Substituir o nome `template-js-cloudfunction-with-terraform` pelo nome do novo repositório criado no arquivo package.json
+- Substituir a chave `{{nome_projeto}}` no arquivo `_config.yml` com o nome do projeto em linguagem natural, para ser usado como titulo da página no site.
+- As variáveis do terraform e e arquivos de exemplo para criação das tabelas no BQ usa a vável `project_name` que pode ser alterado a critério do usuário.
+- No README.md as chaves `{{token-codacy}}` e `{{repo}}` localizada no cabecalho do documento dentro do comentário nas linhas 20-37 deve ser substituida pelo token do projeto no codacy.io e novo nome do repositório.
 
 ## Entendendo o terraform
 
@@ -56,18 +72,19 @@ WIP
 
 ## Entendendo os running do NPM
 
-test
-format
-doc
-lint
-local
-coverage
-WIP
+- test
+- format
+- doc
+- lint
+- local
+- coverage
+  WIP
 
 ## 1. Requisitos para utilização
 
 ### 1.1 Produtos do GCP
 
+- BigQuery
 - Cloud Storage
 - Cloud Function
 - Service account
@@ -109,7 +126,7 @@ Só serão aceitas contribuições que estiverem seguindo os seguintes requisito
 
 ### Api Docs
 
-- [Index.js](https://github.com/dp6/{{repo}}/blob/master/docs/index.md)
+- [Index.js](https://github.com/dp6/template-js-cloudfunction-with-terraform/blob/master/docs/index.md)
 
 ## Suporte:
 
