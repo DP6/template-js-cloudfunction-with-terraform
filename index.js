@@ -38,7 +38,7 @@ const templateCf = async (req, res) => {
 
     let result = [];
     result = result.concat(
-      createSchemaBq([{name: 'teste cf'}], query, `${query[projectConfig.PARAM_QUERY_STRING_SCHEMA]}:`)
+      createSchemaBq([{ name: 'teste cf' }], query, `${query[projectConfig.PARAM_QUERY_STRING_SCHEMA]}:`)
     );
 
     trace('RESULT VALID', result);

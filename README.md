@@ -21,24 +21,29 @@
 
 Respositório template para CF utilizando
 
-* Deploy com terraform de (Arquivos para GCS, Tabelas BQ e CF)
-* Arquivo de configuração dinamico para CF
-* Testes unitários
-* Teste de integração
-* Formatação de código
-* Geração de documentação das funcões javascrip
-* Criação de release automatica
-* Cobertura de código
-* Analise de qualidade de código
-* Github pages com template do github.dp6.io
+- Deploy com terraform de (Arquivos para GCS, Tabelas BQ e CF)
+- Arquivo de configuração dinamico para CF
+- Testes unitários
+- Teste de integração
+- Formatação de código
+- Geração de documentação das funcões javascrip
+- Criação de release automatica
+- Cobertura de código
+- Analise de qualidade de código
+- Github pages com template do github.dp6.io
+
 # Setup {{repo}}
 
 # Preparando o repositório
+
 WIP
+
 ## Variáveis de ambiente no github (secrets)
+
 WIP
 
 ## Renomeando arquivos
+
 {{nome_projeto}}
 project_name
 {{repo}}
@@ -46,9 +51,11 @@ package.json-project-name
 WIP
 
 ## Entendendo o terraform
+
 WIP
 
 ## Entendendo os running do NPM
+
 test
 format
 doc

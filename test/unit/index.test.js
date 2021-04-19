@@ -72,7 +72,7 @@ describe('Template Cloud Function', () => {
         query: { schema: 'global' },
         body: [
           {
-            usuario: { idUsuario: '24413751'}
+            usuario: { idUsuario: '24413751' },
           },
         ],
       };
