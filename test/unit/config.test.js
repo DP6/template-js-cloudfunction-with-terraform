@@ -6,9 +6,7 @@ const expect = chai.expect;
 describe('Arquivo de configuração', () => {
   let config;
   before(() => {
-    config = JSON.parse(
-      fs.readFileSync('terraform/files-copy-to-gcs/project-name/config.json').toString()
-    );
+    config = JSON.parse(fs.readFileSync('terraform/files-copy-to-gcs/project-name/config.json').toString());
   });
   it('Deve possuir o atributo DEPARA_SCHEMA', async () => {
     expect(config).to.have.own.property('DEPARA_SCHEMA');
