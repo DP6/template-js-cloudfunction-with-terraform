@@ -71,6 +71,7 @@ WIP
 WIP
 
 ## Entendendo os running do NPM
+
 - **unit-test**: Realiza uma bateria de testes unitários dos arquivos de js presentes na pasta test/unit;
 - **integration-test**: Realiza uma bateria de testes de integração dos arquivos de js presentes na pasta test/integration;
 - **all-test**:Realiza uma bateria de todos os testes presentes na pasta test/;
