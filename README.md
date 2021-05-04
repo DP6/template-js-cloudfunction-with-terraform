@@ -71,14 +71,18 @@ WIP
 WIP
 
 ## Entendendo os running do NPM
-
-- test
-- format
-- doc
-- lint
-- local
-- coverage
-  WIP
+- **unit-test**: Realiza uma bateria de testes unitários dos arquivos de js presentes na pasta test/unit;
+- **integration-test**: Realiza uma bateria de testes de integração dos arquivos de js presentes na pasta test/integration;
+- **all-test**:Realiza uma bateria de todos os testes presentes na pasta test/;
+- **test**: alias para o comando `all-test`;
+- **lint-md**: Submete o código a markdown a uma avaliação do `remark`;
+- **lint-prettier**: Submete o código a uma avaliação utilizando o [Prettier](https://prettier.io/), de acordo com a configuração descrita no arquivo .prettierrc;,
+- **lint**: Alias para executar todos os lints;
+- **format**: Formata todo o código do projeto, utilizando o [Prettier](https://prettier.io/), de acordo com a configuração descrita no arquivo .prettierrc;
+- **coverage**: Análise da cobertura dos testes;
+- **local**: Executa a cloud function localmente utilizando o functions-frameworks;
+- **coverage**: "nyc --reporter=lcov --reporter=cobertura npm run unit-test",
+- **docs**: Gera a documentção do código fonte seguindo o padrão do `jsdoc2md` aplicado no arquivo index.js, a doc é armanezada em docs/index.md",
 
 ## 1. Requisitos para utilização
 
