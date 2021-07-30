@@ -94,10 +94,7 @@ async function insertRowsAsStream(data, schema, tableId) {
 
   trace(data);
   // Insert data into a table
-  await bigquery
-    .dataset(projectConfig.BQ_DATASET_ID)
-    .table(tableId)
-    .insert(data, options, insertHandler);
+  await bigquery.dataset(projectConfig.BQ_DATASET_ID).table(tableId).insert(data, options, insertHandler);
 
   console.log(`Inserted ${data.length} rows`);
 }
