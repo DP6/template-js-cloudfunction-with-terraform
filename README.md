@@ -38,6 +38,7 @@
 
 {{Texto introdutorio}}
 
+<!-- Remover essa parte a partir desse comentário -->
 Respositório template para CF utilizando
 
 - Deploy com terraform de (Arquivos para GCS, Tabelas BQ e CF)
@@ -52,14 +53,21 @@ Respositório template para CF utilizando
 - Github pages com template do github.dp6.io
 
 # Preparando o repositório
+Crie seu projeto baseado nesse repositório.
 
-WIP
+<img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/create-new-reposotory-from-template.png"/>
 
+(Passo a passo github)[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template]
 ## Variáveis de ambiente no github (secrets)
+Primeiro é necessário conectar o repositório do Github com o (coday.com)[https://app.codacy.com/organizations/gh/DP6/repositories] (referência para conexão)[https://docs.codacy.com/organizations/managing-repositories/#adding-a-repository].
 
-WIP
+Necessário criar a screte CODACY_PROJECT_TOKEN nas configurações do seu repositório no Github em Settings > Secret > New repository Secret
 
-## Renomeando arquivos
+<img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/step-input-secret.png"/>
+
+<img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/step-creat-secret-CODACY.png"/>
+
+## Renomeando os arquivos
 
 - Substituir o nome `template-js-cloudfunction-with-terraform` pelo nome do novo repositório criado no arquivo package.json
 - Substituir a chave `{{nome_projeto}}` no arquivo `_config.yml` com o nome do projeto em linguagem natural, para ser usado como titulo da página no site.
@@ -68,7 +76,10 @@ WIP
 
 ## Entendendo o terraform
 
-WIP
+É recomendo a leitura da documentação oficial do (terraform para Google)[https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started]
+
+<!-- Remover a parte introdutoria até esse comentário -->
+
 
 ## Entendendo os running do NPM
 
@@ -102,6 +113,7 @@ WIP
 4. Variável [GOOGLE_APPLICATION_CREDENTIALS](https://cloud.google.com/docs/authentication/getting-started#setting_the_environment_variable)
 5. Instalar o [Terraform](https://www.terraform.io/downloads.html)
 6. Habilitar os produtos no GCP Cloud Function, BigQuery, Cloud Build API, Cloud Resource Manager API, BigQuery Data Transfer API e Cloud Storage, para uso do BigQuery é necessário ter um billing ativo
+7. *Importante* o usuário que executar o script do terraform precisa ter a permissão de owner no projeto do GCP.
 
 _Observação:_ Utilizando o ambiente no [Google Cloud Shell](https://cloud.google.com/shell/docs) não é necessário fazer os **1**, **2**, **4** e **5**
 
@@ -116,6 +128,7 @@ git clone https://github.com/DP6/{{repo}}.git
 Para fazer deploy no GCP usando o Terraform, o utilize o shell script terraform_deploy
 
 ```console
+cd {{repo}}
 sh terraform_deploy.sh
 ```
 

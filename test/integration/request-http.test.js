@@ -18,7 +18,7 @@ describe('Execução cloud function template', async () => {
     // exec's 'timeout' param won't kill children of "shim" /bin/sh process
     // Workaround: include "& sleep <TIMEOUT>; kill $!" in executed command
     ffProc = execPromise(
-      `functions-framework --target=templateCf --signature-type=http --port ${PORT} & sleep 8; kill $!`,
+      `functions-framework --target=templateCf --signature-type=http --port ${PORT} & sleep 12; kill $!`,
       { shell: true, cwd }
     );
   });

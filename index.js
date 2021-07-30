@@ -42,7 +42,7 @@ const templateCf = async (req, res) => {
     );
 
     trace('RESULT VALID', result);
-    insertRowsAsStream(result);
+    insertRowsAsStream(result, projectConfig.BQ_SCHEMA_RAWDATA, projectConfig.BQ_TABLE_ID_RAWDATA);
     res.status(200).send(debugging ? { debugging: debugging, result: result } : 'sucesso!');
   }
 };
@@ -81,11 +81,13 @@ function addTimestamp(data) {
 /**
  * Realiza a persistências dos dados por Stream no BigQuery
  * @param {Array} data Dados estruturados no padrão de persistência do BQ
+ * @param {String} schema Schema da tabela do BQ
+ * @param {String} tableId Nome da tabela do BQ
  */
-async function insertRowsAsStream(data) {
+async function insertRowsAsStream(data, schema, tableId) {
   const bigquery = new BigQuery();
   const options = {
-    schema: projectConfig.BQ_SCHEMA_RAWDATA,
+    schema: schema,
     skipInvalidRows: true,
     ignoreUnknownValues: true,
   };
@@ -94,7 +96,7 @@ async function insertRowsAsStream(data) {
   // Insert data into a table
   await bigquery
     .dataset(projectConfig.BQ_DATASET_ID)
-    .table(projectConfig.BQ_TABLE_ID_RAWDATA)
+    .table(tableId)
     .insert(data, options, insertHandler);
 
   console.log(`Inserted ${data.length} rows`);
